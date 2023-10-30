@@ -45,7 +45,9 @@
                 if (!this.isRunning) {
                     this.timer = setInterval(() => {
                         if (this.minutes === 0 && this.seconds ===0 ) {
-                            this.counter++;
+                            this.counter = this.counter + 5;
+                            this.sendCounter();
+                            console.log(this.counter);
                             this.stopTimer();
                             this.resetTimer();
 
@@ -84,6 +86,10 @@
                 } else {
                     this.starTimer();
                 }
+            },
+
+            sendCounter() {
+                this.$emit('counter', this.counter);
             },
         }
     }
