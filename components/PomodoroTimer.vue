@@ -25,8 +25,8 @@
             return {
                 isRunning: false,
                 timer: null,
-                minutes: 0,
-                seconds: 10,
+                minutes:25,
+                seconds: 0,
                 counter: 0,
             }
         },
@@ -73,8 +73,8 @@
 
             resetTimer() {
                 this.stopTimer();
-                this.minutes = 0;
-                this.seconds = 10;
+                this.minutes = 25;
+                this.seconds = 0;
                 clearInterval(this.timer);
                 this.isRunning = false;
             },  
