@@ -5,7 +5,7 @@
             </svg>
             
             <div class="text-white text-md font-semibold font-['Inter']">
-                23
+                {{ counter }}
             </div>
         </div>
     </div>
@@ -13,6 +13,9 @@
 
 <script>
     export default {
+        props: {
+            counter: Number
+        }
         
     }
 </script>

@@ -3,21 +3,21 @@
         <Points/>
         <TabsWrapper>
             <Tab title="Pomodoro">
-                <PomodoroTimer :minutes="minutes = 25" :seconds="seconds = 0"/>
+                <PomodoroTimer />
             </Tab>
             <Tab title="Break">
-                <PomodoroTimer :minutes="minutes = 5" :seconds="seconds = 0"/>
+                <BreakTimer />
             </Tab>
             <Tab title="Long Break">
-                <PomodoroTimer :minutes="15" :seconds="0"/>
+                <LongBreakTimer />
             </Tab>
         </TabsWrapper>
 
-        <div class="btn flex justify-center">
-            <ButtonStartStop />
-            <ButtonReset />
-        </div>
-    </div>
+        <audio controls loop class="ml-4 mt-10 w-[250px] h-[40px]">
+            <source src="../assets/sounds/lofi-rain.mp3" type="audio/mpeg">
+        </audio>
+
+    </div> 
 </template>
 
 <script>
@@ -25,21 +25,9 @@ import TabsWrapper from '@/components/TabsWrapper.vue'
 import Tab from '@/components/Tab.vue'
 import Points from '@/components/Points.vue'
 import PomodoroTimer from '@/components/PomodoroTimer.vue'
-import ButtonStartStop from '@/components/Button/ButtonStartStop.vue'
-import ButtonReset from '@/components/Button/ButtonReset.vue'
+
     export default {
-        data() {
-            return {
-                minutes: Number,
-                seconds: Number,
-                timer: null,
-                isRunning: false
-            }
-        },
-
-        methods: {
-
-        }
+        
     }
     
 </script>
