@@ -27,6 +27,10 @@ import Points from '@/components/Points.vue'
 import PomodoroTimer from '@/components/PomodoroTimer.vue'
 
     export default {
+        head() {
+            title: 'ForestFlow'
+        },
+
         data() {
             return {
                 counter: 0,
